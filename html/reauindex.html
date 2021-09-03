@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkay Resumos</title>
+    <link rel="icon" href="/img/logomamacocortada.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="topo" id="navTopo" style="width: 100%;">
+        <img src="/img/logomamacocortada.png" alt="" class="icone">
+        <a href="javascript:hamburguer()" class="hamburguer" id="burgerA">
+            <i class="fa fa-bars"></i>
+        </a>
+            <br class="pedro">
+            <a href="#">Home</a>
+            <a href="#">Resumos</a>
+            <a href="#">Quem Somos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Feedback</a>
+
+        <form action="/" method="GET" class="form-inline formNav">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar">
+                <div class="input-group-append">
+                    <button class="btn btn-success lupa" type="submit"></button>
+                </div>
+              </div>
+        </form>
+    </nav>
+
+    <main>
+        <img src="/img/Banner.png" alt="" style="width: 100%;">
+        <div class="grid1 outZoomBack">
+            <a href="#"><div class="zoomBack hitler destaqueImgLink">
+                <div class="txtDestaque">
+                    Segunda Guerra Mundial
+                </div>
+            </div>
+            </a>
+            <div class="grid2 outZoomBack">
+                <a href="#">
+                <div class="zoomBack francesa destaqueImgLink">
+                    <div class="txtDestaque">
+                        Revolução Francesa
+                    </div>
+                </div>
+                </a>
+                <a href="#" class="destaqueImgLink">
+                <div class="zoomBack independencia destaqueImgLink">
+                    <div class="txtDestaque">
+                        Indepencia do Brasil
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+          
+    </main>
+
+    <footer class="footer">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae ut quia fuga sint laborum repellendus? Excepturi soluta consectetur porro unde enim, accusamus sit illo tempore culpa natus assumenda, quis praesentium.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia similique perferendis officiis repudiandae consequatur qui reiciendis eligendi aliquid vero nulla at ea, voluptatibus quod, et in obcaecati unde corporis molestiae!
+        </p>
+    </footer>
+</body>
+
+<script>
+    function hamburguer() {
+        var x = document.getElementById("navTopo");
+        if (x.className === "topo") {
+            x.className += " responsivo";
+        } else {
+            x.className = "topo";
+        }
+    }
+</script>
+
+</html>

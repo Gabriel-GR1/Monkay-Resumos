@@ -1,0 +1,76 @@
+CODIGOS PRA POR NO MY ADMIN
+
+1-CREATE TABLE `comentario` (
+  `comment_id` int(11) NOT NULL,
+  `titulo` varchar(200) NOT NULL,
+  `comentario` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+2-CREATE TABLE `resumo` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(50) NOT NULL,
+  `resumo` text NOT NULL,
+  `fundo` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+3-CREATE TABLE `usuario` (
+  `usuario_id` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL,
+  `senha` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`usuario_id`, `nome`, `senha`) VALUES
+(1, 'Admin', 'Admin');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
+-- Indexes for table `resumo`
+--
+ALTER TABLE `resumo`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `titulo` (`titulo`);
+
+--
+-- Indexes for table `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`usuario_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `resumo`
+--
+ALTER TABLE `resumo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `usuario_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+COMMIT;

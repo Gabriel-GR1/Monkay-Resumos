@@ -1,0 +1,242 @@
+:root {
+    --corNav:#242424;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+nav {
+    background-color: var(--corNav);
+    overflow: hidden;
+    line-height: 80px;
+    font-size:17px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+}
+
+nav a {
+    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    padding: 7px 13px;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+}
+
+nav a:hover {
+    background: #383838;
+    transition: .5s;
+}
+
+/* Paralelos */
+
+/*  */
+.lupa {
+    background-image: url(/img/search.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 5px 7px;
+    width: 30px;
+}
+
+.inputNav {
+    font-size: 17px;
+    font-family: "Ubuntu", sans-serif;
+    height: 25px;
+    padding: 1px 1px 1px 1px;
+}
+
+.formNav {
+    margin-top: 25px;
+    margin-left: 5%;
+    float: left;
+}
+
+.icone {
+    position: relative;
+    float: left;
+    width: 200px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.hamburguer {
+    min-height: 10%;
+    max-height: 20%;
+    min-width: 50px;
+    display: none;
+}
+
+.outZoomBack {
+    overflow: hidden;
+}
+
+.hitler {
+    background: url('/img/Destaques/segundaguerra.jpeg');
+}
+
+.francesa {
+    background: url('/img/Destaques/framcesa.jpeg');
+}
+
+.independencia {
+    background: url('/img/Destaques/brasilindependence.png');
+}
+
+.zoomBack {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-size: 120%;
+    transition: all 0.5s;
+}
+
+.zoomBack:hover {
+    transition: all 0.5s;
+    background-size: 130%;
+}
+
+.contentMarg {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.grid1 {
+    margin: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+}
+
+.grid2 {
+    display: grid;
+    margin-left: 10px;
+    grid-gap: 10px;
+    grid-template-rows: 250px;
+}
+
+.txtDestaque {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30%;
+    color: aliceblue;
+    padding: 10px;
+}
+
+/* Main  */
+
+main {
+    font-family: "Ubuntu", sans-serif;
+}
+
+main p {
+    margin: 10px;
+}
+
+/*  */
+
+.footer {
+    background: #111;
+    bottom: 0;
+    padding:  50px 0px;
+    z-index: -100;
+}
+
+.footer p {
+    text-align: left;
+    margin: 10px;
+    color: white; 
+    column-count: 2;
+    column-gap: 50px;
+}
+/* Remoção feature Bootstrap */
+
+
+/* Media Queries */
+
+@media screen and (max-width: 760px) {
+    nav a:not(:first-child) {display: none;}
+    nav a.hamburguer{
+        float: right;
+        display: block;
+    }
+
+    nav .pedro {
+        display: none;
+    }
+
+    nav .formNav {
+        float: left;
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    nav.responsivo {position: relative;}
+    nav.responsivo .hamburguer {
+        position: absolute;
+        display: block;
+        right: 0;
+        top: 0;
+    }
+
+    nav.responsivo a {
+        float: none;
+        display: grid;
+        text-align: left;
+    }
+
+    nav.responsivo .pedro {
+        display: block;
+    }
+
+    nav.responsivo .form-inline {
+        float: left;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .grid1 {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
+
+    .grid2 {
+        margin-top: 10px;
+        margin-left: 0px;
+        grid-gap: 7px;
+        grid-template-rows: 50% 50%;
+    }
+    
+    .destaqueImgLink {
+        width: 100%;
+        padding: 1px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    nav .pedro {
+        display: none;
+    }
+
+    .grid2 {
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+
+    .destaqueImgLink {
+        padding: 1px;
+        height: 100%;
+    }
+}

@@ -1,0 +1,130 @@
+Instruções para editar o código e entender o projeto posteriormente abaixo:
+
+
+===================================== Como Usar =============================================================
+
+
+O sistema já está basicamente pronto, você apenas precisa hospedar localmente e entrar e começar a escrever 
+seus resumos.
+
+A página principal é index.php
+
+A página para a criação de artigos é artigos.php
+
+A página para visualização de comentários é comentarios.php
+
+
+
+============================= Tecnologias utilizadas ===============================
+
+
+Primeiramente, as tecnologias utilizadas nesse projeto incluem:
+
+HTML, CSS, Javascript, PHP, SQL
+
+Frameworks, Bibliotecas, Plugins e APIs::
+
+As frameworks utilizadas nesse projeto incluem Bootstrap para CSS
+
+As bibliotecas utilizadas incluem jQuery 
+
+A API utilizada foi o Quill, para o editor de texto dos artigos.
+
+
+
+====================================== Pastas ========================================
+
+- CSS
+
+É a pasta na qual ficaram os primeiros arquivos css do projeto.
+
+- HTML
+
+É a pasta na qual ficaram os primeiros arquivos html do projeto.
+
+- img
+
+É a pasta na qual ficaram as primeiras imagens para o projeto.
+
+- PHP
+
+É a pasta onde realmente está o sistema para o funcionamento do site, nela você pode encontrar desde 
+a página index do site, até as conexões e queries do banco de dados.
+
+Dentro da pasta PHP estão os principais arquivos, em sistema estão os paralelos.
+
+
+
+As páginas abaixo pertecem á pasta PHP
+
+- Sistema
+
+A pasta onde se encontram os arquivos paralelos, como funções, classes, etc.
+
+- Database
+
+A pasta onde se encontra a conexão com o banco de dados e outras queries.
+
+- Functions
+
+Essa pasta serviria para guardasr funções, mas foi descartada.
+
+
+
+
+===================================== Como Modificar? =======================================================
+
+Acredito que hora ou outra o projeto precisará ser modificado, não se preocupe, o projeto é orientado
+a objetos, e é bem fácil sair modificando ele.
+
+--- Como modifico a página principal? ---
+
+Para modificar a página principal, você pode ir até os arquivos:
+
+head.php | nav.php | main.php | footer.php
+
+Esses arquivos guardam numa string um bloco de html, esse bloco será imprimido com o comando echo nas 
+respectivas partes do html, sendo head.php para head, nav.php para nav, main.php para main e footer.php para o footer.
+
+Sendo assim, uma geração dinâmica de páginas.
+
+Para modificar o css, você deve apenas modificar os blocos gerados por esses arquivos.
+
+
+Outras pastas presentes na parte de sistema também retornam blocos de HTML (Ou PHP) para o arquivo index.php.
+O arquivo visto anteriomente, main.php,  retorna a parte html main para a página principal. Outros arquivos
+retornam a parte main de acordo com o parametro *page*, que é recebido sempre pela página index.php, por exemplo
+quando você clica em resumos, o parâmetro *page* será igual á resumos, assim retornando um bloco de HTML main para
+a área dos resumos.
+
+Sendo assim, fica fácil até entender a dinâmica da geração dinâmica de páginas aqui presente.
+Os arquivos possuem nomes bem descritivos, e os arquivos disponíveis aos usuários (Os arquivos acessíveis pelo site),
+possuem os mesmos nomes dos links dentro do site.
+
+--- Para que servem os outros arquivos que não estão presentes no site? ---
+
+Esses outros arquivos complementam funções e funcionalidades para o site, customizá-los e bem fácil e seus
+códigos são relativamente simples de entender, por exemplo, o arquivo feedback.php retorna o main da página
+feedback, porém, ele utiliza do arquivo Comment.php, para enviar os feedbacks para a página de comentários.
+
+-- Considerações Importantes da modificação
+
+Algo bem importante para se levar para a modificação é o arquivo autoload.php, ele é um dos arquivos mais Importantes
+pois ele carrega automaticamente classes utilizadas em diversas páginas, inclusive na página principal, index.php.
+
+Caso você não entenda seu funcionamento, evite modifica-lo.
+
+
+===================================== Arquivos Importantes ====================================================
+
+index.php = Página principal
+
+style.css = Arquivo que contém todo o CSS do site
+
+comentarios.php = Página para visualização dos comentarios
+
+artigos.php = Página para a criação de resumos
+
+chernobyl.php = Essa página serve apenas para testes, sejam eles quais forem.
+
+conection.php = Esse arquivo abre a conexão com o banco de dados, utilizado em vários arquivos do projeto.
